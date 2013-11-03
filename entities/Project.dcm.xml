@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Project" table="project">
+    <unique-constraints>
+      <unique-constraint name="project_name_UNIQUE" columns="project_name"/>
+    </unique-constraints>
+    <id name="projectName" type="integer" column="project_name">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="45" nullable="true"/>
+    <field name="startDate" type="date" column="start_date" nullable="true"/>
+    <field name="scheduledEndDate" type="date" column="scheduled_end_date" nullable="true"/>
+    <field name="actualEndDate" type="date" column="actual_end_date" nullable="true"/>
+    <field name="projectStatusId" type="integer" column="project_status_id" nullable="true"/>
+    <field name="priorityId" type="integer" column="priority_id" nullable="true"/>
+    <field name="description" type="text" column="description" nullable="true"/>
+  </entity>
+</doctrine-mapping>

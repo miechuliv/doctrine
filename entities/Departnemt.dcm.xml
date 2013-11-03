@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Departnemt" table="departnemt">
+    <unique-constraints>
+      <unique-constraint name="departnemt_id_UNIQUE" columns="department_id"/>
+    </unique-constraints>
+    <id name="departmentId" type="integer" column="department_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="45" nullable="true"/>
+    <field name="telephone" type="string" column="telephone" length="45" nullable="true"/>
+    <field name="head" type="integer" column="head" nullable="true"/>
+  </entity>
+</doctrine-mapping>

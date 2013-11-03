@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Email" table="email">
+    <unique-constraints>
+      <unique-constraint name="email_id_UNIQUE" columns="email_id"/>
+    </unique-constraints>
+    <id name="emailId" type="integer" column="email_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="receiver" type="string" column="receiver" length="45" nullable="true"/>
+    <field name="sender" type="string" column="sender" length="45" nullable="true"/>
+    <field name="subject" type="string" column="subject" length="45" nullable="true"/>
+    <field name="body" type="text" column="body" nullable="true"/>
+    <field name="type" type="string" column="type" length="45" nullable="true"/>
+    <field name="folder" type="integer" column="folder" nullable="true"/>
+  </entity>
+</doctrine-mapping>

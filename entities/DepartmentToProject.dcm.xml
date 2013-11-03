@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="DepartmentToProject" table="department_to_project">
+    <unique-constraints>
+      <unique-constraint name="Department_to_Project_id_UNIQUE" columns="Department_to_Project_id"/>
+    </unique-constraints>
+    <id name="departmentToProjectId" type="integer" column="Department_to_Project_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="projectId" type="integer" column="project_id" nullable="true"/>
+    <field name="departnemtId" type="integer" column="departnemt_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EmployeeToProject" table="employee_to_project">
+    <unique-constraints>
+      <unique-constraint name="Employee_to_Project_id_UNIQUE" columns="Employee_to_Project_id"/>
+    </unique-constraints>
+    <id name="employeeToProjectId" type="integer" column="Employee_to_Project_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="projectId" type="integer" column="project_id" nullable="true"/>
+    <field name="assignedBy" type="integer" column="assigned_by" nullable="true"/>
+    <field name="dateAssigned" type="date" column="date_assigned" nullable="true"/>
+    <field name="role" type="text" column="role" nullable="true"/>
+    <field name="employeeId" type="integer" column="employee_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>

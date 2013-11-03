@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Sale" table="sale">
+    <id name="saleId" type="integer" column="sale_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="productId" type="integer" column="product_id" nullable="true"/>
+    <field name="contactId" type="integer" column="contact_id" nullable="true"/>
+    <field name="employeeId" type="integer" column="employee_id" nullable="true"/>
+    <field name="dateSale" type="date" column="date_sale" nullable="true"/>
+    <field name="description" type="text" column="description" nullable="true"/>
+    <field name="saleMethodId" type="integer" column="sale_method_id" nullable="true"/>
+    <field name="branchId" type="integer" column="branch_id" nullable="true"/>
+    <field name="quantity" type="integer" column="quantity" nullable="false"/>
+  </entity>
+</doctrine-mapping>

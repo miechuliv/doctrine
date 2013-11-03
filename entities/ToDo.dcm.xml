@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ToDo" table="to_do">
+    <unique-constraints>
+      <unique-constraint name="event_id_UNIQUE" columns="todo_id"/>
+    </unique-constraints>
+    <id name="todoId" type="integer" column="todo_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="45" nullable="true"/>
+    <field name="description" type="text" column="description" nullable="true"/>
+    <field name="contactAssigned" type="integer" column="contact_assigned" nullable="true"/>
+    <field name="employeeAssigned" type="integer" column="employee_assigned" nullable="true"/>
+    <field name="dateAssigned" type="date" column="date_assigned" nullable="true"/>
+    <field name="dateOfEvent" type="date" column="date_of_event" nullable="true"/>
+    <field name="priorityId" type="integer" column="priority_id" nullable="true"/>
+    <field name="reminderId" type="integer" column="reminder_id" nullable="true"/>
+    <field name="remind" type="boolean" column="remind" nullable="true"/>
+    <field name="addedBy" type="integer" column="added_by" nullable="true"/>
+    <field name="statusId" type="integer" column="status_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>

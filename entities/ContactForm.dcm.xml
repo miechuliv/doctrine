@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ContactForm" table="contact_form">
+    <unique-constraints>
+      <unique-constraint name="contact_form_id_UNIQUE" columns="contact_form_id"/>
+    </unique-constraints>
+    <id name="contactFormId" type="integer" column="contact_form_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="45" nullable="true"/>
+  </entity>
+</doctrine-mapping>

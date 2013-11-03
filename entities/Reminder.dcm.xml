@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Reminder" table="reminder">
+    <unique-constraints>
+      <unique-constraint name="reminder_id_UNIQUE" columns="reminder_id"/>
+    </unique-constraints>
+    <id name="reminderId" type="integer" column="reminder_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="date" type="datetime" column="date" nullable="true"/>
+    <field name="dayInterval" type="integer" column="day_interval" nullable="true"/>
+    <field name="hourInterval" type="integer" column="hour_interval" nullable="true"/>
+  </entity>
+</doctrine-mapping>

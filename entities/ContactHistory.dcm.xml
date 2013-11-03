@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ContactHistory" table="contact_history">
+    <unique-constraints>
+      <unique-constraint name="contact_history_id_UNIQUE" columns="contact_history_id"/>
+    </unique-constraints>
+    <id name="contactHistoryId" type="integer" column="contact_history_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="contactFormId" type="integer" column="contact_form_id" nullable="true"/>
+    <field name="employeeId" type="integer" column="employee_id" nullable="true"/>
+    <field name="contactId" type="integer" column="contact_id" nullable="true"/>
+    <field name="contactHistoryDate" type="datetime" column="contact_history_date" nullable="true"/>
+    <field name="dateAdded" type="datetime" column="date_added" nullable="true"/>
+    <field name="comment" type="text" column="comment" nullable="true"/>
+  </entity>
+</doctrine-mapping>

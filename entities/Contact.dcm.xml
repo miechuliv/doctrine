@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Contact" table="contact">
+    <unique-constraints>
+      <unique-constraint name="contact_id_UNIQUE" columns="contact_id"/>
+    </unique-constraints>
+    <id name="contactId" type="integer" column="contact_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="firstName" type="string" column="first_name" length="45" nullable="true"/>
+    <field name="lastName" type="string" column="last_name" length="45" nullable="true"/>
+    <field name="mobile" type="string" column="mobile" length="45" nullable="true"/>
+    <field name="telephone" type="string" column="telephone" length="45" nullable="true"/>
+    <field name="address" type="string" column="address" length="45" nullable="true"/>
+    <field name="city" type="string" column="city" length="45" nullable="true"/>
+    <field name="country" type="string" column="country" length="45" nullable="true"/>
+    <field name="email" type="string" column="email" length="45" nullable="true"/>
+    <field name="statusId" type="integer" column="status_id" nullable="true"/>
+    <field name="typeId" type="integer" column="type_id" nullable="true"/>
+    <field name="sourceId" type="integer" column="source_id" nullable="true"/>
+    <field name="priorityId" type="integer" column="priority_id" nullable="true"/>
+    <field name="addedBy" type="integer" column="added_by" nullable="true"/>
+    <field name="comment" type="text" column="comment" nullable="true"/>
+    <field name="region" type="string" column="region" length="45" nullable="true"/>
+    <field name="company" type="string" column="company" length="45" nullable="true"/>
+    <field name="rank" type="string" column="rank" length="45" nullable="true"/>
+  </entity>
+</doctrine-mapping>

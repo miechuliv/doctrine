@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="EmailThread" table="email_thread">
+    <id name="emailThreadId" type="integer" column="email_thread_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="messageId" type="integer" column="message_id" nullable="true"/>
+  </entity>
+</doctrine-mapping>
